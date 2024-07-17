@@ -1,0 +1,53 @@
+form {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    border: 2px solid white;
+    margin: 50px;
+    text-align: center;
+    background-color: aquamarine;
+    border-radius: 50px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+}
+
+.boton {
+    margin-left: 200px;
+    width: 200px;
+    border-radius: 20px;
+    color: black;
+    font-size: 20px;
+    letter-spacing: 2px;
+    background-color: aquamarine
+}
+
+input[type="submit"] {
+    width: 100px;
+    margin-left: 150px;
+    letter-spacing: 2px;
+    font-size: 10px;
+    font-weight: bold;
+    background-color: gainsboro;
+}
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: gainsboro;
+    color: #333;
+}

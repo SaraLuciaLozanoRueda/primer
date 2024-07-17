@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/details.css}" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bienvenido...</h1>
+    <form th:action="@{/registros/create}" th:object="${user}" method="post">
+        <p>Nombre:<input type="text" th:field="*{nombre}" size="40" placeholder="Ejemplo:Sara Lucia"></p>
+        <p>Apellido: <input type="text" th:field="*{apellido}" size="40" placeholder="Ejemplo:Lozano Rueda"></p>
+        <p>Profesion: <input type="text" th:field="*{profesion}" size="40"  placeholder="Ejemplo:Estudiante"></p>
+        <br>
+        <input type="submit" value="GUARDAR" >
+        <br><br>
+    </form>
+
+
+    <div class="tabla">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Profesion</th>
+                </tr>
+            </thead>
+           <tbody>
+            <tr th:each="u,iter:${users}">
+                <td th:text="${u.nombre}"></td>
+                <td th:text="${u.apellido}"></td>
+                <td th:text="${u.profesion}"></td>
+            </tr>
+    
+           </tbody>
+    
+        </table>
+        
+    </div>
+   
+    
+    
+</body>
+</html>
